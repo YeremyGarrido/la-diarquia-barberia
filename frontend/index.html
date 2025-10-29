@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="La Diarquía - Expertos en potenciar tu imagen. Asesoría personalizada, elegancia y visagismo."
+    />
+
+    <!-- SEO y Open Graph (para compartir en redes sociales) -->
+    <meta property="og:title" content="La Diarquía - Barbería Premium" />
+    <meta
+      property="og:description"
+      content="Expertos en potenciar tu imagen. Asesoría personalizada, elegancia y visagismo."
+    />
+    <meta property="og:image" content="images/og-image.jpg" />
+    <!-- Reemplazar con una imagen representativa de 1200x630px -->
+    <meta property="og:url" content="https://www.tudominio.com" />
+    <!-- Reemplazar con la URL final del sitio -->
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <title>La Diarquía - Barbería</title>
+
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <!-- Reemplazar con tu favicon -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Feather Icons (para iconos SVG) -->
+    <script src="https://unpkg.com/feather-icons" defer></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- API base (usado por js/script.js). Actualiza este valor tras desplegar el backend. -->
+    <meta name="api-base" content="https://la-diarquia-backend.fly.dev/api" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header" class="header">
+      <nav class="navbar">
+        <div class="nav-wrapper container">
+          <div class="logo">
+            <img
+              src="images/page_logo_450c6cb64923bca0-Photoroom.png"
+              alt="Logo de La Diarquía Barbería"
+              class="header-logo-image"
+            />
+          </div>
+          <button class="mobile-menu-toggle" id="mobileMenuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-links" id="navLinks">
+            <li style="--i: 1">
+              <a href="#home" class="nav-link active">Inicio</a>
+            </li>
+            <li style="--i: 2">
+              <a href="#services" class="nav-link">Servicios</a>
+            </li>
+            <li style="--i: 3">
+              <a href="#about" class="nav-link">Nosotros</a>
+            </li>
+            <li style="--i: 4">
+              <a href="#gallery" class="nav-link">Galería</a>
+            </li>
+            <li style="--i: 5">
+              <a href="#contact-form" class="nav-link">Contacto</a>
+            </li>
+            <li style="--i: 6">
+              <a href="#contact-form" class="btn btn-nav">Reservar Cita</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content" data-aos="zoom-in">
+          <span
+            class="hero-subtitle"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            >Bienvenido a La Diarquía</span
+          >
+          <h1 class="hero-title" data-aos="fade-up" data-aos-duration="1000">
+            Expertos en potenciar tu <span>Imagen</span>
+          </h1>
+          <p
+            class="hero-description"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+          >
+            Asesoría personalizada donde la elegancia, el visagismo y el relajo
+            se unen.
+          </p>
+          <div
+            class="hero-buttons"
+            data-aos="fade-up"
+            data-aos-delay="400"
+            data-aos-duration="1000"
+          >
+            <a href="#contact-form" class="btn btn-primary">Reserva tu Cita</a>
+            <a href="#services" class="btn btn-secondary">Ver Servicios</a>
+          </div>
+        </div>
+        <div class="hero-scroll">
+          <span>Desliza</span>
+          <div class="scroll-arrow"></div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="services">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-subtitle" data-aos="fade-right"
+              >Lo que ofrecemos</span
+            >
+            <h2 class="section-title" data-aos="fade-right">
+              Nuestros <span>Servicios</span>
+            </h2>
+            <p class="section-description" data-aos="fade-right">
+              Servicios profesionales de barbería con atención al detalle
+            </p>
+          </div>
+          <div class="services-grid">
+            <div class="service-card" data-aos="fade-up">
+              <div class="service-icon">
+                <!-- Icono: Tijeras (Heroicons) -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  role="img"
+                  aria-label="Tijeras - Corte de Cabello"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m7.848 8.25 1.536.887M7.848 8.25a3 3 0 1 1-5.196-3 3 3 0 0 1 5.196 3Zm1.536.887a2.165 2.165 0 0 1 1.083 1.839c.005.351.054.695.14 1.024M9.384 9.137l2.077 1.199M7.848 15.75l1.536-.887m-1.536.887a3 3 0 1 1-5.196 3 3 3 0 0 1 5.196-3Zm1.536-.887a2.165 2.165 0 0 0 1.083-1.838c.005-.352.054-.695.14-1.025m-1.223 2.863 2.077-1.199m0-3.328a4.323 4.323 0 0 1 2.068-1.379l5.325-1.628a4.5 4.5 0 0 1 2.48-.044l.803.215-7.794 4.5m-2.882-1.664A4.33 4.33 0 0 0 10.607 12m3.736 0 7.794 4.5-.802.215a4.5 4.5 0 0 1-2.48-.043l-5.326-1.629a4.324 4.324 0 0 1-2.068-1.379M14.343 12l-2.882 1.664"
+                  />
+                </svg>
+              </div>
+              <h3>Corte de Cabello Personalizado</h3>
+              <p>
+                Servicio completo con asesoría de imagen para un look a tu
+                medida, adaptado a tus facciones y estilo.
+              </p>
+              <a href="#" class="service-link">Más información →</a>
+            </div>
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="service-icon">
+                <!-- Icono: Brocha (Heroicons paint-brush - outline) -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  role="img"
+                  aria-label="Brocha - Barba Personalizada"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42"
+                  />
+                </svg>
+              </div>
+              <h3>Barba Personalizada</h3>
+              <p>
+                Experiencia relajante con toallas calientes y productos de alta
+                calidad para cuidar tu piel y barba.
+              </p>
+              <a href="#" class="service-link">Más información →</a>
+            </div>
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="service-icon">
+                <!-- Icono: Cara sonriente (Heroicons) -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  role="img"
+                  aria-label="Experiencia Premium - Corte y Barba"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z"
+                  />
+                </svg>
+              </div>
+              <h3>Corte y Barba "La Diarquía"</h3>
+              <p>
+                Experiencia TOP con corte visagista y ritual de barba con espuma
+                italiana, toallas calientes y vapor de ozono.
+              </p>
+              <a href="#" class="service-link">Más información →</a>
+            </div>
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="service-icon">
+                <!-- Icono: Brillos (Heroicons) -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  role="img"
+                  aria-label="Brillos - Limpieza Facial"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"
+                  />
+                </svg>
+              </div>
+              <h3>Limpieza Facial FULL</h3>
+              <p>
+                Purificación y revitalización que elimina piel muerta, suciedad
+                y grasa acumulada para un rostro fresco.
+              </p>
+              <a href="#" class="service-link">Más información →</a>
+            </div>
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+              <div class="service-icon">
+                <!-- Icono: Tijeras (Heroicons) para corte a tijeras -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  role="img"
+                  aria-label="Tijeras - Corte a Tijeras"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m7.848 8.25 1.536.887M7.848 8.25a3 3 0 1 1-5.196-3 3 3 0 0 1 5.196 3Zm1.536.887a2.165 2.165 0 0 1 1.083 1.839c.005.351.054.695.14 1.024M9.384 9.137l2.077 1.199M7.848 15.75l1.536-.887m-1.536.887a3 3 0 1 1-5.196 3 3 3 0 0 1 5.196-3Zm1.536-.887a2.165 2.165 0 0 0 1.083-1.838c.005-.352.054-.695.14-1.025m-1.223 2.863 2.077-1.199m0-3.328a4.323 4.323 0 0 1 2.068-1.379l5.325-1.628a4.5 4.5 0 0 1 2.48-.044l.803.215-7.794 4.5m-2.882-1.664A4.33 4.33 0 0 0 10.607 12m3.736 0 7.794 4.5-.802.215a4.5 4.5 0 0 1-2.48-.043l-5.326-1.629a4.324 4.324 0 0 1-2.068-1.379M14.343 12l-2.882 1.664"
+                  />
+                </svg>
+              </div>
+              <h3>Corte sólo a Tijeras</h3>
+              <p>
+                Estilo auténtico y detallado para cabello largo, ideal para
+                looks modernos como Wolf Cut, Mod o Shaggy.
+              </p>
+              <a href="#" class="service-link">Más información →</a>
+            </div>
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+              <div class="service-icon">
+                <!-- Icono: Brillos (Heroicons) para Camuflaje de Canas -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  role="img"
+                  aria-label="Brillos - Camuflaje de Canas"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"
+                  />
+                </svg>
+              </div>
+              <h3>Camuflaje de Canas</h3>
+              <p>
+                Cobertura discreta y natural de canas en barba o cabello para
+                una imagen fresca y rejuvenecida.
+              </p>
+              <a href="#" class="service-link">Más información →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about">
+        <div class="container">
+          <div class="about-content">
+            <div class="about-image-wrapper" data-aos="fade-right">
+              <img
+                src="images/about-us.png"
+                alt="Interior de la barbería La Diarquía"
+                loading="lazy"
+                width="560"
+                height="500"
+              />
+              <div class="about-badge">
+                <span class="badge-number">2</span>
+                <span class="badge-text">Barberos Expertos</span>
+              </div>
+            </div>
+            <div class="about-text" data-aos="fade-left">
+              <span
+                class="section-subtitle"
+                data-aos="fade-left"
+                data-aos-delay="100"
+                >Expertos en potenciar tu imagen</span
+              >
+              <h2
+                class="section-title"
+                data-aos="fade-left"
+                data-aos-delay="200"
+              >
+                Elegancia, Visagismo y <span>Relajo</span>
+              </h2>
+              <p data-aos="fade-left" data-aos-delay="300">
+                La Diarquía es más que una barbería, es un espacio donde te
+                brindamos una asesoría personalizada. Somos expertos en
+                potenciar tu imagen, uniendo la elegancia, el visagismo y el
+                relajo en cada servicio.
+              </p>
+              <p data-aos="fade-left" data-aos-delay="400">
+                Nuestro equipo, compuesto por Martín Ruiz y Tomás Acuña, está
+                dedicado a brindar una experiencia única, combinando técnicas
+                precisas con las últimas tendencias en estilismo masculino.
+              </p>
+              <div class="about-features">
+                <div class="feature-item">
+                  <div class="feature-icon" aria-hidden="true">✓</div>
+                  <div class="feature-text">
+                    <h4>Barberos Profesionales</h4>
+                    <p>Equipo certificado y capacitado</p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon" aria-hidden="true">✓</div>
+                  <div class="feature-text">
+                    <h4>Productos Premium</h4>
+                    <p>Solo las mejores marcas del mercado</p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon" aria-hidden="true">✓</div>
+                  <div class="feature-text">
+                    <h4>Ambiente Único</h4>
+                    <p>Experiencia relajante y profesional</p>
+                  </div>
+                </div>
+              </div>
+              <a href="#contact-form" class="btn btn-primary">Visítanos</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section id="gallery" class="gallery">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-subtitle" data-aos="fade-right"
+              >Nuestro Trabajo</span
+            >
+            <h2 class="section-title" data-aos="fade-right">
+              Galería de <span>Estilos</span>
+            </h2>
+          </div>
+          <div class="gallery-grid">
+            <div class="gallery-item" data-aos="zoom-in">
+              <img
+                src="images/gallery/gallery-01.png"
+                alt="Hombre con corte de cabello clásico y peinado lateral"
+                loading="lazy"
+                width="600"
+                height="600"
+              />
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+              <img
+                src="images/gallery/gallery-02.png"
+                alt="Primer plano de un corte de cabello con degradado (fade) moderno"
+                loading="lazy"
+                width="600"
+                height="600"
+              />
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+              <img
+                src="images/gallery/gallery-03.png"
+                alt="Hombre con barba completa perfectamente arreglada y perfilada"
+                loading="lazy"
+                width="600"
+                height="600"
+              />
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+              <img
+                src="images/gallery/gallery-04.png"
+                alt="Galería estilo 4"
+                loading="lazy"
+                width="600"
+                height="600"
+              />
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+              <img
+                src="images/gallery/gallery-05.png"
+                alt="Galería estilo 5"
+                loading="lazy"
+                width="600"
+                height="600"
+              />
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500">
+              <img
+                src="images/gallery/gallery-06.png"
+                alt="Galería estilo 6"
+                loading="lazy"
+                width="600"
+                height="600"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="testimonials">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-subtitle" data-aos="fade-right"
+              >Testimonios</span
+            >
+            <h2 class="section-title" data-aos="fade-right">
+              Lo que dicen <span>nuestros clientes</span>
+            </h2>
+          </div>
+          <div class="testimonials-slider">
+            <div class="testimonial-card" data-aos="fade-up">
+              <div
+                class="testimonial-rating"
+                role="img"
+                aria-label="Calificación: 5 de 5 estrellas"
+              >
+                ★★★★★
+              </div>
+              <p class="testimonial-text">
+                "Excelente servicio, los mejores barberos de la ciudad. Siempre
+                salgo satisfecho con mi corte. Totalmente recomendado."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">JD</div>
+                <div class="author-info">
+                  <h4>Juan Pérez</h4>
+                  <span>Cliente Regular</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="testimonial-card"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div
+                class="testimonial-rating"
+                role="img"
+                aria-label="Calificación: 5 de 5 estrellas"
+              >
+                ★★★★★
+              </div>
+              <p class="testimonial-text">
+                "Ambiente profesional y acogedor. Los barberos son expertos y el
+                servicio es de primera. Sin duda mi barbería favorita."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">MR</div>
+                <div class="author-info">
+                  <h4>Miguel Rodríguez</h4>
+                  <span>Cliente VIP</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="testimonial-card"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div
+                class="testimonial-rating"
+                role="img"
+                aria-label="Calificación: 5 de 5 estrellas"
+              >
+                ★★★★★
+              </div>
+              <p class="testimonial-text">
+                "La mejor experiencia de barbería que he tenido. Atención
+                personalizada y resultados impecables cada vez."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">CG</div>
+                <div class="author-info">
+                  <h4>Carlos González</h4>
+                  <span>Cliente desde 2020</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact-form" class="contact">
+        <div class="container">
+          <div class="contact-wrapper">
+            <div class="contact-form-wrapper" data-aos="fade-up">
+              <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Agenda tu Hora</span>
+                <h2 class="section-title">Reserva tu <span>Cita</span></h2>
+                <p class="section-description">
+                  Completa el formulario y asegura tu próxima visita. ¡Te
+                  esperamos!
+                </p>
+              </div>
+              <form
+                class="contact-form"
+                id="contactForm"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <div class="form-group">
+                  <label for="name" class="sr-only">Tu Nombre</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Tu Nombre *"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email" class="sr-only">Tu Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Tu Email *"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="phone" class="sr-only">Tu Teléfono</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Tu Teléfono (+56 9...)"
+                    pattern="^\+569[0-9]{8}$"
+                    title="El formato debe ser +569xxxxxxxx"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="service" class="sr-only"
+                    >Selecciona un Servicio</label
+                  >
+                  <select id="service" name="service" required>
+                    <option value="">Selecciona un Servicio *</option>
+                    <option value="corte-personalizado">
+                      Corte Personalizado
+                    </option>
+                    <option value="corte-barba-diarquia">
+                      Corte y Barba "La Diarquía"
+                    </option>
+                    <option value="barba-personalizada">
+                      Barba Personalizada
+                    </option>
+                    <option value="limpieza-facial">Limpieza Facial</option>
+                    <option value="corte-tijeras">Corte solo a Tijeras</option>
+                    <option value="camuflaje-canas">Camuflaje de Canas</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="date" class="sr-only">Selecciona una fecha</label>
+                  <input
+                    type="text"
+                    id="date"
+                    name="date"
+                    placeholder="Selecciona una fecha *"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="time" class="sr-only">Selecciona una Hora</label>
+                  <select id="time" name="time" required disabled>
+                    <option value="">Primero selecciona una fecha</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">
+                  Reserva Cita
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contacto" class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section footer-brand">
+            <img
+              src="images/image-Photoroom.png"
+              alt="Logo La Diarquía - Compacto"
+              class="footer-logo-image"
+            />
+            <p>
+              Tu barbería de confianza.<br />Tradición, estilo y elegancia en
+              cada corte.
+            </p>
+            <div class="footer-social">
+              <a
+                href="https://www.instagram.com/ladiarquia.barberia/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <i data-feather="instagram"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61580496937251"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <i data-feather="facebook"></i>
+              </a>
+              <a href="mailto:ladiarquiabarberia@gmail.com" aria-label="Correo">
+                <i data-feather="mail"></i>
+              </a>
+              <a
+                href="https://wa.me/56990409061"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+              >
+                <!-- Logo de WhatsApp (inline SVG, color heredado) -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.52 3.48A11.77 11.77 0 0 0 12 0 11.9 11.9 0 0 0 .26 12.13L0 24l11.87-.26A11.9 11.9 0 0 0 24 12c0-3.16-1.22-6.13-3.48-8.52ZM12 21.56a9.57 9.57 0 0 1-4.88-1.33l-.35-.2-3.25.07.07-3.16-.2-.33A9.54 9.54 0 1 1 21.56 12 9.56 9.56 0 0 1 12 21.56Zm5.5-7.27c-.3-.15-1.78-.88-2.05-.98s-.48-.15-.68.15-.78.98-.95 1.18-.35.22-.65.07a7.77 7.77 0 0 1-2.29-1.41 8.57 8.57 0 0 1-1.59-1.98c-.17-.3 0-.46.13-.62.13-.15.3-.33.45-.5s.2-.3.3-.5.05-.37-.02-.53c-.07-.15-.68-1.65-.93-2.26-.25-.6-.5-.52-.68-.53h-.58a1.12 1.12 0 0 0-.8.38 3.34 3.34 0 0 0-1.05 2.48 5.77 5.77 0 0 0 1.2 3.07 13.2 13.2 0 0 0 5.07 4.95c.71.3 1.26.48 1.7.62.71.23 1.36.2 1.88.12.57-.08 1.78-.72 2.03-1.41.25-.7.25-1.3.18-1.42-.07-.12-.27-.2-.57-.35Z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <!-- Mapa embebido -->
+            <div class="footer-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.63697961543!2d-70.61115868479996!3d-33.43295098077909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c58f66f6f3a9%3A0x8b7362f6bfa333a!2sAlmte.%20Pastene%2070%2C%20Providencia%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1678886456789!5m2!1ses-419!2scl"
+                width="100%"
+                height="150"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Ubicación de La Diarquía en Google Maps"
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h5>Enlaces Rápidos</h5>
+            <ul class="footer-links">
+              <li><a href="#home">Inicio</a></li>
+              <li><a href="#services">Servicios</a></li>
+              <li><a href="#about">Nosotros</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h5>Servicios</h5>
+            <ul class="footer-links">
+              <li><a href="#services">Corte de Cabello</a></li>
+              <li><a href="#services">Corte y Barba</a></li>
+              <li><a href="#services">Limpieza Facial</a></li>
+              <li><a href="#services">Camuflaje de Canas</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h5>Información de Contacto</h5>
+            <ul class="footer-links">
+              <li>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Almte.+Pastene+70,+Providencia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Almte. Pastene 70, Providencia</a
+                >
+              </li>
+              <!-- Número eliminado: reemplazado por icono de WhatsApp en redes sociales -->
+              <li><span>Lun - Vie: 10:00 - 19:30</span></li>
+              <li><span>Sab: 10:00 - 17:00</span></li>
+              <li><span>Dom: Cerrado</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2024 La Diarquía. Todos los derechos reservados.</p>
+          <div class="footer-bottom-links">
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Términos y Condiciones</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+      ↑
+    </button>
+
+    <script>
+      // Activa Feather Icons de forma segura tras cargar el DOM y el script defer
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.feather && typeof window.feather.replace === "function") {
+          window.feather.replace();
+        }
+      });
+    </script>
+
+    <!-- AOS (Animate On Scroll) Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.AOS && typeof AOS.init === "function") {
+          AOS.init({
+            offset: 90,
+            duration: 750,
+            easing: "cubic-bezier(0.22, 1, 0.36, 1)", // Easing más orgánico
+            once: true,
+            mirror: false,
+            anchorPlacement: "top-bottom",
+          });
+        }
+      });
+    </script>
+
+    <!-- Schema.org para SEO Local -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HairSalon",
+        "name": "La Diarquía",
+        "image": "images/og-image.jpg",
+        "url": "https://www.tudominio.com",
+        "telephone": "+56990409061",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Almte. Pastene 70",
+          "addressLocality": "Providencia",
+          "addressRegion": "RM",
+          "addressCountry": "CL"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "10:00",
+            "closes": "19:45"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "10:00",
+            "closes": "16:45"
+          }
+        ]
+      }
+    </script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+# ──────────────────────────────
+# La Diarquía Barbería Premium
+# Archivos y carpetas a ignorar
+# ──────────────────────────────
+
+# Entornos
+.env
+.env.local
+.env.*.local
+
+# Dependencias
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Compilaciones / Caches
+dist/
+build/
+.cache/
+.temp/
+
+# Plataformas
+.vercel/
+.fly/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# IDE / Config
+.vscode/
+.idea/
+
