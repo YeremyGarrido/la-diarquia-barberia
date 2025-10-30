@@ -456,15 +456,6 @@ chore: Mantenimiento
 
 ---
 
-## Documentación Adicional
-
-- [MIGRACION_REPORTE.md](./MIGRACION_REPORTE.md) - Reporte detallado de migración
-- [GUIA_FINALIZACION.md](./GUIA_FINALIZACION.md) - Pasos para completar setup
-- [RESUMEN_EJECUTIVO.md](./RESUMEN_EJECUTIVO.md) - Visión general del proyecto
-- [COMANDOS_RAPIDOS.md](./COMANDOS_RAPIDOS.md) - Scripts útiles
-
----
-
 ## Problemas Conocidos
 
 1. **Horarios disponibles:** Actualmente son estáticos, pendiente implementar verificación en Google Calendar
@@ -492,7 +483,6 @@ Este proyecto es propiedad privada de La Diarquía Barbería. Todos los derechos
 
 ## Agradecimientos
 
-- Equipo de desarrollo
 - Google Calendar API
 - Meta WhatsApp Business API
 - Comunidad open source
