@@ -1,9 +1,6 @@
 app = "la-diarquia-barberia-backend"
 primary_region = "scl"
 
-[build]
-  image = "flyio/node:20"
-
 [env]
   PORT = "8080"
   NODE_ENV = "production"
