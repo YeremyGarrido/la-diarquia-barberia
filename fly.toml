@@ -1,6 +1,9 @@
 app = "la-diarquia-barberia-backend"
 primary_region = "scl"
 
+[build]
+  dockerfile = "backend/Dockerfile"
+
 [env]
   PORT = "8080"
   NODE_ENV = "production"
