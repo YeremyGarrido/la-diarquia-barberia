@@ -1,24 +1,25 @@
-# Usa una imagen oficial de Node.js
-FROM node:20-alpine
+# Usa una imagen base oficial de Node.js (ligera)
+FROM node:20-slim
 
-# Crea el directorio de trabajo dentro del contenedor
+# Establece el directorio de trabajo dentro del contenedor
 WORKDIR /app
 
-# Copia package.json y package-lock.json
-COPY package*.json ./
+#
+# CORRECCIÓN: Copia los archivos de dependencias DESDE la subcarpeta 'backend'
+#
+COPY backend/package*.json ./
 
-# Instala dependencias
-RUN npm install --omit=dev
+# Instala solo las dependencias de producción
+# 'ci' es más rápido y fiable para builds
+RUN npm ci --omit=dev
 
-# Copia el resto del código fuente
-COPY . .
+#
+# CORRECCIÓN: Copia el RESTO del código, pero SOLO de la carpeta 'backend'
+#
+COPY backend/ .
 
-# Define las variables de entorno por defecto
-ENV NODE_ENV=production
-ENV PORT=8080
-
-# Expone el puerto que Fly usará
+# Expone el puerto que tu app usa INTERNAMENTE
 EXPOSE 8080
 
-# Comando para ejecutar el servidor
-CMD ["node", "server.js"]
+# El comando para iniciar tu aplicación
+CMD ["npm", "start"]
